@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.204503c7.css",
+    "main.js": "/static/js/main.5b45563e.js",
+    "static/media/3.gif": "/static/media/3.8908db569bfb8f1b1ce7.gif",
+    "static/media/7.gif": "/static/media/7.befb206a6ad977218652.gif",
+    "static/media/2.gif": "/static/media/2.0a4c3edf53ced866052f.gif",
+    "static/media/1.gif": "/static/media/1.0441144fcb795fcb0eea.gif",
+    "static/media/llama-gold.gif": "/static/media/llama-gold.0441144fcb795fcb0eea.gif",
+    "static/media/5.gif": "/static/media/5.6d0c1b73eb8dd302ca83.gif",
+    "static/media/6.gif": "/static/media/6.a5a59d15758217bd5459.gif",
+    "static/media/4.gif": "/static/media/4.4dc39f26bf6db30ccb51.gif",
+    "static/media/logo.png": "/static/media/logo.e580807aad5a6e7ce35f.png",
+    "static/media/FredokaOne-Regular.ttf": "/static/media/FredokaOne-Regular.4aea26dd6637dfac0fac.ttf",
+    "static/media/Gumball.ttf": "/static/media/Gumball.cb829af0ad882093769c.ttf",
+    "static/media/frame.gif": "/static/media/frame.8e249e7a294bd736287e.gif",
+    "static/media/shopLlama.png": "/static/media/shopLlama.82365b8ad7ecf7bd5110.png",
+    "index.html": "/index.html",
+    "main.204503c7.css.map": "/static/css/main.204503c7.css.map",
+    "main.5b45563e.js.map": "/static/js/main.5b45563e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.204503c7.css",
+    "static/js/main.5b45563e.js"
+  ]
+}

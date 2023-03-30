@@ -9,7 +9,7 @@ function App() {
 
 
     return (
-        <Router forceRefresh={true}>
+        <Router>
             <Switch>
                 <Route exact path="/">
                     <Home />

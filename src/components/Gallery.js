@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../images/logo.png";
 import iconImage from "../images/L_name.png";
 import goldFrame from "../images/frame.gif";
-import longbarImage from "../images/longbar.png";
 
 import galleryImage_1 from "../gallery/1.gif";
 import galleryImage_2 from "../gallery/2.gif";
@@ -103,7 +102,6 @@ function Gallery() {
             <link rel="icon" type="image/x-icon" href="images/L_name.png"/>
             <div className="top-bar">
                 <Link to="/"><img className="logo" src={logo} alt="logo"/></Link>
-                <img className="longbar" src={longbarImage} alt="longbar"/>
                 <Link to="/"><img className="icon" src={iconImage} alt="icon"/></Link>
                 <div alt="list button"><button className="list-button" onClick={()=>setShow(!show)}>
                     <FontAwesomeIcon icon={faList} style={{color: "yellow"}} /></button></div>
@@ -119,7 +117,7 @@ function Gallery() {
                     }
                 </div>
                 <div className="twitter-button" alt="twitter button">
-                    <a href="https://twitter.com/LlamaPixNFT" target="_blank">
+                    <a href="https://twitter.com/LlamaPixNFT" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faTwitter}/></a></div>
                 <div className="opensea-button" alt="opensea button"><a href="# ">
                     <FontAwesomeIcon icon={faSailboat}/></a></div>

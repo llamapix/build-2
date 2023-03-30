@@ -20,13 +20,9 @@ body {
 }
 
 .top-bar {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.longbar {
-  width: 100%;
+  background: #1D1D1D;
+  height: 80px;
+  width: 100%;  
   position: relative;
   top: 0;
   left: 0;
@@ -59,6 +55,7 @@ body {
   font-size: 4vw;
   position: relative;
   left: 15%;
+  top: 60px;
 }
 
 .gallery-page-button {
@@ -70,7 +67,8 @@ body {
   text-decoration: none;
   font-size: 4vw;
   position: relative;
-  left: 21.5%;   
+  left: 21.5%;
+  top: 60px;
 }
 
 .shop-page-button {
@@ -83,6 +81,7 @@ body {
   font-size: 4vw;
   position: relative;
   left: 27%; 
+  top: 60px;
 }
 
 .collabs-page-button {
@@ -95,6 +94,7 @@ body {
   font-size: 4vw;
   position: relative;
   left: 33%; 
+  top: 60px;
 }
 
 .opensea-button {
@@ -345,14 +345,14 @@ body {
 .gallery-image-1 {
   width: 59%;
   position: relative;
-  padding-top: 10%;
+  padding-top: 5%;
   left: 20%;
 }
 
 .gold-frame-gallery-image-1 {
   width: 75%;
   position: absolute;
-  padding-top: 10%;
+  padding-top: 5%;
   left: 13.5%;
 }
 
@@ -781,7 +781,7 @@ body {
 @media only screen and (min-width: 768px){
 
   .top-bar {
-    background: #2c506b;
+    background: #1D1D1D;
     height: 60px;
     width: 100%;  
     position: relative;
@@ -798,10 +798,6 @@ body {
     left: 1%;
     position: absolute;
     width: 12%;
-  }
-
-  .longbar {
-    display: none;
   }
   
   .icon {
@@ -1571,7 +1567,7 @@ body {
 @media only screen and (min-width: 2000px) and (min-height: 1200px) {
 
   .top-bar {
-    background: #2c506b;
+    background: #1D1D1D;
     height: 80px;
     width: 100%;  
     position: relative;

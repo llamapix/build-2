@@ -118,7 +118,8 @@ function Gallery() {
                         </>
                     }
                 </div>
-                <div className="twitter-button" alt="twitter button"><a href="# ">
+                <div className="twitter-button" alt="twitter button">
+                    <a href="https://twitter.com/LlamaPixNFT" target="_blank">
                     <FontAwesomeIcon icon={faTwitter}/></a></div>
                 <div className="opensea-button" alt="opensea button"><a href="# ">
                     <FontAwesomeIcon icon={faSailboat}/></a></div>

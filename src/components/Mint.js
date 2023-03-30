@@ -107,11 +107,12 @@ function Mint() {
                         </>
                     }
                 </div>
-                <div className="twitter-button" alt="twitter button"><a href="/">
+                <div className="twitter-button" alt="twitter button">
+                    <a href="https://twitter.com/LlamaPixNFT" target="_blank">
                     <FontAwesomeIcon icon={faTwitter}/></a></div>
-                <div className="opensea-button" alt="opensea button"><a href="/">
+                <div className="opensea-button" alt="opensea button"><a href="# ">
                     <FontAwesomeIcon icon={faSailboat}/></a></div>
-                <div className="medium-button" alt="medium button"><a href="/">
+                <div className="medium-button" alt="medium button"><a href="# ">
                     <FontAwesomeIcon icon={faMedium}/></a></div>
                 <div className="connect-button" onClick={connectWallet}>
                     {(walletAddress && walletAddress.length > 0) ?<a href="# ">{walletAddress.substring(0, 2)}...

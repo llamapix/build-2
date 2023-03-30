@@ -13,6 +13,7 @@ import shopLlama from "../images/shopLlama.png";
 
 function Shop() {
 
+    // eslint-disable-next-line
     let signer;
     window.Buffer = window.Buffer || Buffer;
     const [ show, setShow ] = useState(true);
@@ -20,7 +21,6 @@ function Shop() {
     const connectedProvider = ((window.ethereum != null) ? 
         new ethers.providers.Web3Provider(window.ethereum) : 
         ethers.providers.getDefaultProvider());
-    console.log(signer);
 
     useEffect(() => {
         getCurrentWallet();
@@ -79,7 +79,6 @@ function Shop() {
         if(typeof window != "undefined" && typeof window.ethereum != "undefined"){
             window.ethereum.on("accountsChanged", (accounts) => {
                 setWalletAddress(accounts[0]);
-                console.log(accounts[0]);
             });
         } else {
             setWalletAddress("");

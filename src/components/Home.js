@@ -14,6 +14,7 @@ import goldenLlama from "../images/llama-gold.gif";
 
 function Home() {
 
+    // eslint-disable-next-line
     let signer;
     window.Buffer = window.Buffer || Buffer;
     const [ show, setShow ] = useState(true);
@@ -21,7 +22,6 @@ function Home() {
     const connectedProvider = ((window.ethereum != null) ? 
         new ethers.providers.Web3Provider(window.ethereum) : 
         ethers.providers.getDefaultProvider());
-    console.log(signer);
     
     useEffect(() => {
         getCurrentWallet();
@@ -80,7 +80,6 @@ function Home() {
         if(typeof window != "undefined" && typeof window.ethereum != "undefined"){
             window.ethereum.on("accountsChanged", (accounts) => {
                 setWalletAddress(accounts[0]);
-                console.log(accounts[0]);
             });
         } else {
             setWalletAddress("");

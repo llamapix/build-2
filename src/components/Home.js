@@ -114,9 +114,11 @@ function Home() {
                     <FontAwesomeIcon icon={faSailboat}/></a></div>
                 <div className="medium-button" alt="medium button"><a href="# ">
                     <FontAwesomeIcon icon={faMedium}/></a></div>
-                <div className="connect-button" onClick={connectWallet}>
-                    {(walletAddress && walletAddress.length > 0) ?<a href="# ">{walletAddress.substring(0, 2)}...
-                    {walletAddress.substring(38)}</a> : <a href="# ">Connect</a>}
+                    <div className="connect-button" onClick={connectWallet}>
+                    {//eslint-disable-next-line
+                    ((walletAddress && walletAddress.length > 0) ? <a>{walletAddress.substring(0, 2)}...{
+                    //eslint-disable-next-line
+                    walletAddress.substring(38)}</a> : <a>Connect</a>)}
                 </div>
             </div>
             <div>

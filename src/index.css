@@ -98,6 +98,9 @@ body {
 }
 
 .opensea-button {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
   height: auto;
   max-width: 15%;
@@ -155,6 +158,9 @@ body {
 }
 
 .twitter-button {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   height: auto;
   max-width: 10%;
   position: absolute;
@@ -211,6 +217,9 @@ body {
 }
 
 .medium-button {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
   height: auto;
   max-width: 15%;
@@ -904,6 +913,9 @@ body {
   }
 
   .twitter-button {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     height: auto;
     max-width: 5%;
     position: absolute;
@@ -960,6 +972,9 @@ body {
   }
 
   .medium-button {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     height: auto;
     max-width: 5%;
     position: absolute;

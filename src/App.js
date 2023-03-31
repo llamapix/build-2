@@ -1,29 +1,31 @@
+import { Route, Switch } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Shop from "./components/Shop";
 import Mint from "./components/Mint";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
         
     return (
-        <Router>
+        <HashRouter>
             <Switch>
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/Gallery">
+                <Route exact path="/gallery">
                     <Gallery />
                 </Route>
-                <Route exact path="/Shop">
+                <Route exact path="/shop">
                     <Shop />
                 </Route>
-                <Route exact path="/Mint">
+                <Route exact path="/mint">
                     <Mint />
                 </Route>
             </Switch>
-        </Router>
+        </HashRouter>
     );
+
 }
 
 export default App;

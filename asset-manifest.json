@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a79e499.css",
+    "main.css": "/static/css/main.172cf73b.css",
     "main.js": "/static/js/main.06024e05.js",
     "static/media/3.gif": "/static/media/3.8908db569bfb8f1b1ce7.gif",
     "static/media/7.gif": "/static/media/7.befb206a6ad977218652.gif",
@@ -16,11 +16,11 @@
     "static/media/frame.gif": "/static/media/frame.8e249e7a294bd736287e.gif",
     "static/media/shopLlama.png": "/static/media/shopLlama.82365b8ad7ecf7bd5110.png",
     "index.html": "/index.html",
-    "main.6a79e499.css.map": "/static/css/main.6a79e499.css.map",
+    "main.172cf73b.css.map": "/static/css/main.172cf73b.css.map",
     "main.06024e05.js.map": "/static/js/main.06024e05.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a79e499.css",
+    "static/css/main.172cf73b.css",
     "static/js/main.06024e05.js"
   ]
 }

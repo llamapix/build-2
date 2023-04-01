@@ -120,7 +120,8 @@ function Gallery() {
                     <FontAwesomeIcon icon={faTwitter}/></a></div>
                 <div className="opensea-button" alt="opensea button"><a href="# ">
                     <FontAwesomeIcon icon={faSailboat}/></a></div>
-                <div className="medium-button" alt="medium button"><a href="# ">
+                <div className="medium-button" alt="medium button">
+                    <a href="https://medium.com/@llamapix.nft/llamapix-9ff635226703" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faMedium}/></a></div>
                 <div className="connect-button" onClick={connectWallet}>
                     {//eslint-disable-next-line

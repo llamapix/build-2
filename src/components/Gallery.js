@@ -18,7 +18,7 @@ import galleryImage_4 from "../gallery/4.gif";
 import galleryImage_5 from "../gallery/5.gif";
 import galleryImage_6 from "../gallery/6.gif";
 import galleryImage_7 from "../gallery/7.gif";
-import galleryImage_8 from "../gallery/8.png";
+import galleryImage_8 from "../gallery/8.gif";
 
 function Gallery() {
     

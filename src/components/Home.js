@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ethers } from "ethers";
 import { Buffer } from "buffer";
 import { useState, useEffect } from "react";
-import { merkleProof } from "../merkleProof";
 
 import { faSailboat, faList } from "@fortawesome/free-solid-svg-icons";
 import { faMedium, faTwitter } from "@fortawesome/free-brands-svg-icons";

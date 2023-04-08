@@ -1,5 +1,7 @@
 import goldFrame from "../images/frame.gif";
 import goldenLlama from "../images/llama-gold.gif";
+import collabsImage from "../images/collabsImage.png";
+import collabsMobile from "../images/collabsMobile.png";
 
 function Home() {
 
@@ -23,9 +25,17 @@ function Home() {
                         You will not regret it either. Stay tuned on twitter for announcements.
                     </p>
                 </div>
+                <div className="collabs-description-container">
+                    <h1 className="collabs-description">OUR COLLABS</h1>
+                </div>
+                <div className="collabs-image-container">
+                    <img className="collabs-image" src={ collabsImage } alt="collabs"/>
+                </div>
+                <div className="collabs-mobile-container">
+                    <img className="collabs-mobile" src={ collabsMobile } alt="collabsMobile"/>
+                </div>
             </div>
-            <div className="application-form-button" alt="application form">
-                <a href="https://forms.gle/WDfMdwY4kk8dhZWD6" target="_blank" rel="noreferrer">Application Form</a></div>
+
         </header>
     );
 }

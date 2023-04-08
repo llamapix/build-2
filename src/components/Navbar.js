@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { ethers } from "ethers";
-import { Buffer } from "buffer";
 import { useState, useEffect } from "react";
+import Web3 from "web3";
 
 import { faSailboat, faList } from "@fortawesome/free-solid-svg-icons";
 import { faMedium, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -12,20 +11,9 @@ import iconImage from "../images/L_name.png";
 
 function Navbar() {
 
-    // eslint-disable-next-line
-    let signer;
-    window.Buffer = window.Buffer || Buffer;
     const [ show, setShow ] = useState(true);
     const [ walletAddress, setWalletAddress ] = useState("");
-    const connectedProvider = ((window.ethereum != null) ? 
-        new ethers.providers.Web3Provider(window.ethereum) : 
-        ethers.providers.getDefaultProvider());
-    
-    useEffect(() => {
-        getCurrentWallet();
-        addWalletListener();
-    });
-    
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth > 768) {
@@ -39,49 +27,36 @@ function Navbar() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-
-    const connectWallet = async() => {
-        if(typeof window != "undefined" && typeof window.ethereum != "undefined"){
-            try{
-                const accounts = await window.ethereum.request({method: "eth_requestAccounts"});
-                setWalletAddress(accounts[0]);
-                let connectedProvider = new ethers.providers.Web3Provider(window.ethereum);
-                signer = connectedProvider.getSigner();
-            } catch(err) {
-                console.error(err.message);
-            }
-        } else {
-            console.log("Please install MetaMask");
-        }
-    }
-
-    const getCurrentWallet = async() => {
-        if(typeof window != "undefined" && typeof window.ethereum != "undefined"){
-            try{
-                const accounts = await window.ethereum.request({method: "eth_accounts"});
-                if(accounts.length > 0){
-                    setWalletAddress(accounts[0]);
-                    console.log(accounts[0]);
-                    signer = connectedProvider.getSigner();
-                } else {
-                    console.log("Please connect with MetaMask")
+    useEffect(() => {
+        async function connectToWeb3() {
+            if (window.ethereum) {
+                try {
+                    const accounts = await window.ethereum.request({
+                        method: 'eth_accounts',
+                    });
+                    if (accounts.length > 0) {
+                        setWalletAddress(accounts[0]);
+                    }
+                    window.ethereum.on('accountsChanged', (newAccounts) => {
+                        setWalletAddress(newAccounts[0]);
+                    });
+                    const web3 = new Web3(window.ethereum);
+                } catch (error) {
+                console.error(error);
                 }
-            } catch(err) {
-                console.error(err.message);
+            } else {
+                console.error('Web3 not found');
             }
-        } else {
-            console.log("Please install MetaMask");
         }
-    }
+        connectToWeb3();
+    }, []);
 
-    const addWalletListener = async() => {
-        if(typeof window != "undefined" && typeof window.ethereum != "undefined"){
-            window.ethereum.on("accountsChanged", (accounts) => {
-                setWalletAddress(accounts[0]);
-            });
-        } else {
-            setWalletAddress("");
-            console.log("Please install MetaMask");
+    async function handleClick() {
+        try {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            const web3 = new Web3(window.ethereum);
+        } catch (error) {
+            console.error(error);
         }
     }
 
@@ -96,26 +71,33 @@ function Navbar() {
                     <FontAwesomeIcon icon={faList} style={{color: "yellow"}} /></button></div>
                 <div>
                     {
-                        show ? <></> :
+                        show ? 
+                            <></> :
                             <>
                                 <Link className="home-page-button" to="/">HOME</Link>
                                 <Link className="gallery-page-button" to="/gallery">GALLERY</Link>
                                 <Link className="shop-page-button" to="/shop">SHOP</Link>
                                 <Link className="collabs-page-button" to="/mint">MINT</Link>
+                                <Link className="checker-page-button" to="/checker">CHECKER</Link>
                             </>
                     }
                 </div>
-                <div className="twitter-button" alt="twitter button">
-                    <a href="https://twitter.com/LlamaPixNFT" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faTwitter}/></a></div>
-                <div className="opensea-button" alt="opensea button"><a href="# ">
-                    <FontAwesomeIcon icon={faSailboat}/></a></div>
-                <div className="medium-button" alt="medium button">
-                    <a href="https://medium.com/@llamapix.nft/llamapix-9ff635226703" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faMedium}/></a></div>
-                <div className="connect-button" onClick={connectWallet}>
-                    {(walletAddress && walletAddress.length > 0) ?<a href="# ">{walletAddress.substring(0, 2)}...
-                    {walletAddress.substring(38)}</a> : <a href="# ">Connect</a>}
+                <div className="twitter-button-position" alt="twitter button">
+                    <a className="twitter-button" href="# " >
+                    <FontAwesomeIcon icon={faTwitter}/></a>
+                </div>
+                <div className="opensea-button-position" alt="opensea button">
+                    <a className="opensea-button" href="# ">
+                    <FontAwesomeIcon icon={faSailboat}/></a>
+                </div>
+                <div className="medium-button-position" alt="medium button">
+                    <a className="medium-button" href="# " >
+                    <FontAwesomeIcon icon={faMedium}/></a>
+                </div>
+                <div className="connect-button-position" onClick={handleClick}>
+                    {(walletAddress && walletAddress.length > 0) ? <button className="connect-button">
+                    {walletAddress.substring(0, 2)}...{walletAddress.substring(38)}</button> : 
+                    <button className="connect-button">Connect</button>}
                 </div>
             </div>
         </div>

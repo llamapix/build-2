@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Shop from "./components/Shop";
 import Mint from "./components/Mint";
+import Checker from "./components/Checker";
 
 function App() {
         
@@ -22,6 +23,9 @@ function App() {
                 </Route>
                 <Route exact path="/mint">
                     <Mint />
+                </Route>
+                <Route exact path="/checker">
+                    <Checker />
                 </Route>
             </Switch>
         </HashRouter>

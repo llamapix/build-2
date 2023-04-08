@@ -83,7 +83,7 @@ function Navbar() {
                     }
                 </div>
                 <div className="twitter-button-position" alt="twitter button">
-                    <a className="twitter-button" href="https://twitter.com/LlamaPixNFT" >
+                    <a className="twitter-button" href="https://twitter.com/LlamaPixNFT" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faTwitter}/></a>
                 </div>
                 <div className="opensea-button-position" alt="opensea button">
@@ -91,7 +91,7 @@ function Navbar() {
                     <FontAwesomeIcon icon={faSailboat}/></a>
                 </div>
                 <div className="medium-button-position" alt="medium button">
-                    <a className="medium-button" href="https://medium.com/@llamapix.nft" >
+                    <a className="medium-button" href="https://medium.com/@llamapix.nft" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faMedium}/></a>
                 </div>
                 <div className="connect-button-position" onClick={handleClick}>

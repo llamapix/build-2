@@ -15,7 +15,7 @@ function Checker() {
     const [ userWallet, setUserWallet] = useState ("");
     const [ status, setStatus] = useState(". . .");
     const [ color, setColor ] = useState("yellow");
-    const storage = 'QmVAHND56Usnmb5q9k77Si4HSmds9hTwW3x3NQwEbRpKsP';
+    const storage = "QmZzEiEkFrozJrJvmaAFAqkG39z2tcSSWbDNbD22V3UDUp";
 
     async function file(storage) {
         const fileStream = ipfs.cat(storage);
@@ -25,7 +25,7 @@ function Checker() {
             chunks.push(chunk);
         }
     
-        const fetchedData = Buffer.concat(chunks).toString();
+        const fetchedData = Buffer.concat(chunks).toString().toLowerCase();
         const newData = fetchedData.split(',').map(item => item.substring(2));
         newData[0] = '0x' + newData[0];
         return newData;
@@ -37,8 +37,18 @@ function Checker() {
         })
     }, []);
 
+    const tree = new MerkleTree(newList
+        .map(x => keccak256(x)), keccak256, { sortPairs: true })
+
+     
+    function generateProof(userAddress) {
+        return ("[" + (tree.getProof(keccak256(userAddress))
+        .map(x => bufToHex(x.data))).toString() + "]");
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(newList[newList.length - 1])
         if(newList.includes(userWallet)){
             setStatus("YOU ARE WHITELISTED!")
             setColor("greenyellow")
@@ -46,6 +56,8 @@ function Checker() {
             setStatus("YOU ARE NOT WHITELISTED!")       
             setColor("red")
         }
+        //console.log(bufToHex(tree.getRoot()))
+        //console.log(generateProof(userWallet))
     }
 
     return (
@@ -59,7 +71,7 @@ function Checker() {
                     <div className="demo-flex-spacer"></div>
                     <div className="webflow-style-input">
                         <input className="" required value={userWallet}
-                            onChange={(e) => setUserWallet(e.target.value)}
+                            onChange={(e) => setUserWallet((e.target.value).toLowerCase())}
                             placeholder="ENTER YOUR WALLET">
                         </input>
                     </div>

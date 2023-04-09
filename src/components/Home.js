@@ -25,17 +25,16 @@ function Home() {
                         You will not regret it either. Stay tuned on twitter for announcements.
                     </p>
                 </div>
-                <div className="collabs-description-container">
-                    <h1 className="collabs-description">OUR COLLABS</h1>
-                </div>
-                <div className="collabs-image-container">
-                    <img className="collabs-image" src={ collabsImage } alt="collabs"/>
-                </div>
-                <div className="collabs-mobile-container">
-                    <img className="collabs-mobile" src={ collabsMobile } alt="collabsMobile"/>
-                </div>
+                    <div className="collabs-description-container">
+                        <h1 className="collabs-description">OUR COLLABS</h1>
+                    </div>
+                    <div className="collabs-image-container">
+                        <img className="collabs-image" src={ collabsImage } alt="collabs"/>
+                    </div>
+                    <div className="collabs-mobile-container">
+                        <img className="collabs-mobile" src={ collabsMobile } alt="collabsMobile"/>
+                    </div>
             </div>
-
         </header>
     );
 }

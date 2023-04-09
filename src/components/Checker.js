@@ -13,7 +13,7 @@ function Checker() {
     const [ userWallet, setUserWallet] = useState ("");
     const [ status, setStatus] = useState(". . .");
     const [ color, setColor ] = useState("yellow");
-    const storage = 'QmZYXkRWFgNsVRDfk7uQRBcnGcxPrNcRiAbCKL4ZpqvfzK';
+    const storage = 'QmfAkb4ksqYi4dmX8sUwaZ1BP6qdcbZ2JWMoW77nx9BAKD';
 
     async function file(storage) {
         const fileStream = ipfs.cat(storage);

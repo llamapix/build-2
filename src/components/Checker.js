@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 const ipfs = create('https://ipfs.io/');
-const bufToHex = x => "0x" + x.toString("hex")
 window.Buffer = window.Buffer || Buffer;
 
 function Checker() {
@@ -13,28 +12,20 @@ function Checker() {
     const [ userWallet, setUserWallet] = useState ("");
     const [ status, setStatus] = useState(". . .");
     const [ color, setColor ] = useState("yellow");
-    const storage = 'QmaBR6R7uTe5M5CKRTigVAsjVCBVS5vfbdkf4CwaeTtH81';
+    const storage = 'QmZYXkRWFgNsVRDfk7uQRBcnGcxPrNcRiAbCKL4ZpqvfzK';
 
     async function file(storage) {
         const fileStream = ipfs.cat(storage);
         const chunks = [];
-
-        for await (const chunk of fileStream) {
-            chunks.push(chunk);
-        }
-
+        for await (const chunk of fileStream) {chunks.push(chunk);}
         const fetchedData = Buffer.concat(chunks).toString().toLowerCase();
         const newData = fetchedData.split(',').map(item => item.substring(2));
         newData[0] = '0x' + newData[0];
         return newData;
     }
-
-    useEffect(() => {
-        file(storage).then(list => {
-            setList(list);
-        })
-    }, []);
-
+    
+    useEffect(() => {file(storage).then(list => {setList(list);})}, []);
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         if(newList.includes(userWallet)){

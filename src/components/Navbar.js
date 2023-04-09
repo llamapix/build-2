@@ -85,7 +85,7 @@ function Navbar() {
                     <FontAwesomeIcon icon={faTwitter}/></a>
                 </div>
                 <div className="opensea-button-position" alt="opensea button">
-                    <a className="opensea-button" href="# ">
+                    <a className="opensea-button" href="https://opensea.io/collection/llamapix-genesis" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faSailboat}/></a>
                 </div>
                 <div className="medium-button-position" alt="medium button">

@@ -77,8 +77,6 @@ function Navbar() {
                                 <Link className="home-page-button" to="/">HOME</Link>
                                 <Link className="gallery-page-button" to="/gallery">GALLERY</Link>
                                 <Link className="shop-page-button" to="/shop">SHOP</Link>
-                                <Link className="collabs-page-button" to="/mint">MINT</Link>
-                                <Link className="checker-page-button" to="/checker">CHECKER</Link>
                             </>
                     }
                 </div>

@@ -19,7 +19,7 @@ function Home() {
                     <h2 className="subTitle">FOR DEGEN BY DEGEN</h2></div>
                 <div className="pageMainInfo">
                     <p className="mainInfo"> 
-                        LlamaPix is an NFT collection of 7777 pixel themed cool llama characters.
+                        LlamaPix is an NFT collection of 3333 pixel themed cool llama characters.
                         We are bringing these Llamas to life for degens who wants to look cool. 
                         Until now, no llama holder has regretted the llama they minted. 
                         You will not regret it either. Stay tuned on twitter for announcements.

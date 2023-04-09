@@ -18,7 +18,7 @@ function Mint() {
     const [walletAddress, setWalletAddress] = useState("");
     const [accounts, setAccounts] = useState([]);
     const [contractInstance, setContractInstance] = useState(null);
-    const storage = 'QmSKp5M6ME57vLBzJR6SLeLt35h1GCxiZEPZ4ZUqB76LYK';
+    const storage = 'QmaBR6R7uTe5M5CKRTigVAsjVCBVS5vfbdkf4CwaeTtH81';
     const MyContractAddress = "0x9204f747FDa6F9F61e6D6dC982CDBf2dAF87aE4c";
 
     const numIncrease = async () => {

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.3983a464.css",
+    "main.css": "/static/css/main.d01dc0a9.css",
     "main.js": "/static/js/main.f7771f38.js",
     "static/media/collabsImage.png": "/static/media/collabsImage.ea408547b62b3f8fe88d.png",
     "static/media/collabsMobile.png": "/static/media/collabsMobile.2dceef7e51b290dff3cb.png",
@@ -19,11 +19,11 @@
     "static/media/frame.gif": "/static/media/frame.8e249e7a294bd736287e.gif",
     "static/media/shopLlama.png": "/static/media/shopLlama.82365b8ad7ecf7bd5110.png",
     "index.html": "/index.html",
-    "main.3983a464.css.map": "/static/css/main.3983a464.css.map",
+    "main.d01dc0a9.css.map": "/static/css/main.d01dc0a9.css.map",
     "main.f7771f38.js.map": "/static/js/main.f7771f38.js.map"
   },
   "entrypoints": [
-    "static/css/main.3983a464.css",
+    "static/css/main.d01dc0a9.css",
     "static/js/main.f7771f38.js"
   ]
 }

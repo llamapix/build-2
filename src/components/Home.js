@@ -13,8 +13,6 @@ function Home() {
                 <div className="framedGoldenLlama">
                     <img className="golden-llama" src={ goldenLlama } alt="yellow-llama"/>
                     <img className="gold-frame" src={ goldFrame } alt="golden-frame"/></div>
-                <div className="pageTitle">
-                    <h1 className="homepage-title">WHITELIST FORM</h1></div>
                 <div className="pageSubTitle">
                     <h2 className="subTitle">FOR DEGEN BY DEGEN</h2></div>
                 <div className="pageMainInfo">
